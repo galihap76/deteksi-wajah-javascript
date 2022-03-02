@@ -16,7 +16,7 @@ fetch(url, {
   faceapi.nets.faceExpressionNet.loadFromUri('/deteksi-wajah-javascript.github.io')
 ]).then(startVideo)
   }).catch(function() {
-    console.log('Google-  not so OK');
+    console.log('Mengalami kegagalan!');
   });
 
 
