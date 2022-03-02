@@ -1,10 +1,25 @@
 let video = document.getElementById('video');
-Promise.all([
+
+url = 'https://galihap76.github.io/deteksi-wajah-javascript.github.io/';
+
+fetch(url, {
+    method: 'GET',
+    headers: {
+      Accept: 'application/json',
+    }
+  })
+  .then(function() {
+    Promise.all([
   faceapi.nets.tinyFaceDetector.loadFromUri('/deteksi-wajah-javascript.github.io'),
   faceapi.nets.faceLandmark68Net.loadFromUri('/deteksi-wajah-javascript.github.io'),
   faceapi.nets.faceRecognitionNet.loadFromUri('/deteksi-wajah-javascript.github.io'),
   faceapi.nets.faceExpressionNet.loadFromUri('/deteksi-wajah-javascript.github.io')
 ]).then(startVideo)
+  }).catch(function() {
+    console.log('Google-  not so OK');
+  });
+
+
 function startVideo() {
   navigator.getUserMedia(
     { video: {} },
