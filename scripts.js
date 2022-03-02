@@ -1,9 +1,9 @@
 let video = document.getElementById('video');
 Promise.all([
-  faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
-  faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
-  faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
-  faceapi.nets.faceExpressionNet.loadFromUri('/models')
+  faceapi.nets.tinyFaceDetector.loadFromUri('/deteksi-wajah-javascript.github.io'),
+  faceapi.nets.faceLandmark68Net.loadFromUri('/deteksi-wajah-javascript.github.io'),
+  faceapi.nets.faceRecognitionNet.loadFromUri('/deteksi-wajah-javascript.github.io'),
+  faceapi.nets.faceExpressionNet.loadFromUri('/deteksi-wajah-javascript.github.io')
 ]).then(startVideo)
 function startVideo() {
   navigator.getUserMedia(
